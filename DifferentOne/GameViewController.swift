@@ -86,8 +86,8 @@ class GameViewController: UIViewController {
         layer2.fillColor = defaultColor
         if checkIndex(layerindex: 2, random: randomInt) {
             layer2.fillColor = UIColor(red: CGFloat((100.0 + colorOffset)/255.0), green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0).cgColor
-            x_1 = Double(view.frame.width / 8 - 10)
-            x_2 = Double(view.frame.width / 8 - 10) + 120.0
+            x_1 = Double(3 * view.frame.width / 8 - 10)
+            x_2 = Double(3 * view.frame.width / 8 - 10) + 120.0
             y_1 = 150
             y_2 = 150.0 + 120.0
             
@@ -100,8 +100,8 @@ class GameViewController: UIViewController {
         layer3.fillColor = defaultColor
         if checkIndex(layerindex: 3, random: randomInt) {
             layer3.fillColor = UIColor(red: CGFloat((100.0 + colorOffset)/255.0), green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0).cgColor
-            x_1 = Double(view.frame.width / 8 - 14)
-            x_2 = Double(view.frame.width / 8 - 14) + 120.0
+            x_1 = Double(5.5 * view.frame.width / 8 - 14)
+            x_2 = Double(5.5 * view.frame.width / 8 - 14) + 120.0
             y_1 = 150
             y_2 = 150.0 + 120.0
 
@@ -128,8 +128,8 @@ class GameViewController: UIViewController {
         layer5.fillColor = defaultColor
         if checkIndex(layerindex: 5, random: randomInt) {
             layer5.fillColor = UIColor(red: CGFloat((100.0 + colorOffset)/255.0), green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0).cgColor
-            x_1 = Double(view.frame.width / 8 - 10)
-            x_2 = Double(view.frame.width / 8 - 10) + 120.0
+            x_1 = Double(3 * view.frame.width / 8 - 10)
+            x_2 = Double(3 * view.frame.width / 8 - 10) + 120.0
             y_1 = 275.0
             y_2 = 275.0 + 120.0
 
@@ -142,8 +142,8 @@ class GameViewController: UIViewController {
         layer6.fillColor = defaultColor
         if checkIndex(layerindex: 6, random: randomInt) {
             layer6.fillColor = UIColor(red: CGFloat((100.0 + colorOffset)/255.0), green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0).cgColor
-            x_1 = Double(view.frame.width / 8 - 14)
-            x_2 = Double(view.frame.width / 8 - 14) + 120.0
+            x_1 = Double(5.5 * view.frame.width / 8 - 14)
+            x_2 = Double(5.5 * view.frame.width / 8 - 14) + 120.0
             y_1 = 275.0
             y_2 = 275.0 + 120.0
 
@@ -170,8 +170,8 @@ class GameViewController: UIViewController {
         layer8.fillColor = defaultColor
         if checkIndex(layerindex: 8, random: randomInt) {
             layer8.fillColor = UIColor(red: CGFloat((100.0 + colorOffset)/255.0), green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0).cgColor
-            x_1 = Double(view.frame.width / 8 - 10)
-            x_2 = Double(view.frame.width / 8 - 10) + 120.0
+            x_1 = Double(3 * view.frame.width / 8 - 10)
+            x_2 = Double(3 * view.frame.width / 8 - 10) + 120.0
             y_1 = 400.0
             y_2 = 400.0 + 120.0
         }
@@ -183,8 +183,8 @@ class GameViewController: UIViewController {
         layer9.fillColor = defaultColor
         if checkIndex(layerindex: 9, random: randomInt) {
             layer9.fillColor = UIColor(red: CGFloat((100.0 + colorOffset)/255.0), green: 130.0/255.0, blue: 230.0/255.0, alpha: 1.0).cgColor
-            x_1 = Double(view.frame.width / 8 - 14)
-            x_2 = Double(view.frame.width / 8 - 14) + 120.0
+            x_1 = Double(5.5 * view.frame.width / 8 - 14)
+            x_2 = Double(5.5 * view.frame.width / 8 - 14) + 120.0
             y_1 = 400.0
             y_2 = 400.0 + 120.0
 
