@@ -12,13 +12,11 @@ import UIKit
 class GameOver: UIViewController {
 
     @IBOutlet weak var Restart: UIButton!
-    @IBOutlet weak var ScoreLabel: UITextField!
+    @IBOutlet weak var ScoreLabel: UILabel!
     var finalScore = 0
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ScoreLabel.text = "Score: " + String(finalScore)
+        ScoreLabel.text = "SCORE : " + String(finalScore)
         // Do any additional setup after loading the view.
     }
     

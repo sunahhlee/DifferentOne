@@ -52,9 +52,9 @@ class GameViewController: UIViewController {
             var loc = touch.location(in: view)
             print(loc.x, " ",loc.y)
             if (x_1 <= Double(loc.x)) && (Double(loc.x) <= x_2) && (y_1 <= Double(loc.y)) && (Double(loc.y) <= y_2) {
+                resetTimer()
                 updateScore()
                 print("GOOD JOB! New score: ", String(score))
-                resetTimer()
                 viewDidLoad()
             } else {
                 print("Wrong tile!") //EXIT TO GAME OVER SCREEN
@@ -72,32 +72,44 @@ class GameViewController: UIViewController {
     
     @objc func updateScore() {
         score += 1
-        ScoreLabel.text = "Score: " + String(score)
+        ScoreLabel.text = "SCORE : " + String(score)
     }
 
     @objc func updateTimer() {
         if (time > 0) {
             time -= 1     //This will decrement(count down)the seconds.
             TimerLabel.text = String(time) + " sec left!" //This will update the label.
+        } else {
+            endGame()
         }
     }
     
+    func alter(color: Double, offset: Double) -> Double {
+        let plusminus = Int.random(in: 0..<2)
 
+        if (plusminus == 0) {
+            return 255.0 * color - offset
+        } else {
+            return 255.0 * color + offset
+        }
+    }
+    
     func createCircles(round: Int) {
         // GENERATE RANDOM NUMBER
         let randomInt = Int.random(in: 1..<10)
-        let randomR: Double = Double(Int.random(in: 40..<256)) / 255.0
-        let randomG: Double = Double(Int.random(in: 40..<256)) / 255.0
-        let randomB: Double = Double(Int.random(in: 40..<256)) / 255.0
+        let randomR: Double = Double(Int.random(in: 40..<216)) / 255.0
+        let randomG: Double = Double(Int.random(in: 40..<216)) / 255.0
+        let randomB: Double = Double(Int.random(in: 40..<216)) / 255.0
  
         let colorOffset: Double = 40.0 - 1.5 * Double(round)
+        
         if (round >= 15) {
-            let colorOffset: Double = 5
+            let colorOffset: Double = 3
         }
         
-        let offsetR: Double = (255.0 * randomR - colorOffset) / 255.0
-        let offsetG: Double = (255.0 * randomG - colorOffset) / 255.0
-        let offsetB: Double = (255.0 * randomB - colorOffset) / 255.0
+        let offsetR: Double = alter(color: randomR, offset: colorOffset) / 255.0
+        let offsetG: Double = alter(color: randomG, offset: colorOffset) / 255.0
+        let offsetB: Double = alter(color: randomB, offset: colorOffset) / 255.0
 //        var colorOffset: Double = 30.0 - Double(round)
         //let y_first: Int = 120
         //let y_offset: Int = 120
